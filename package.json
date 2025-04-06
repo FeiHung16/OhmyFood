@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet ohmyfood op",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css"
+  ],
+  "author": "Mayer",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.86.0"
+  }
+}
