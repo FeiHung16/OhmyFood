@@ -1,0 +1,20 @@
+@use "./base/base.scss";
+
+
+
+
+
+/*Structure*/
+@use "./structure/_header.scss";
+@use "./structure/_explore.scss";
+@use "./structure/_fonctionnement.scss";
+@use "./structure/_restaurant.scss";
+@use "./structure/_footer.scss";
+
+
+/*annexe*/
+@use "./annexe/_colorgradient.scss";
+@use "./annexe/_boxshadow.scss";
+@use "./annexe/_heart.scss";
+
+
