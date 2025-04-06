@@ -1,0 +1,98 @@
+@use "../annexe/_colorgradient.scss";
+@use "../annexe/_boxshadow.scss";
+
+.proper-functionning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.proper-lst {
+  display: flex;
+  justify-content: center;
+  background: colorgradient.$background-color;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  font-family: roboto, sans-serif;
+  font-size: 14px;
+  color: colorgradient.$background-color;
+  font-weight: 500;
+  transform: translateX(-75px);
+}
+
+
+.proper-functionning-title {
+  position: relative;
+  right: 20%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.proper-functionning-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  & ol {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    padding-right: 40px;
+    list-style: none;
+  }
+
+  & li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: colorgradient.$light-grey-color;
+    border-radius: 25px;
+    width: 320px;
+    height: 72px;
+  }
+
+  .worknumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    color: colorgradient.$background-color;
+    background-color: colorgradient.$primary-color;
+    border-radius: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    position: absolute;
+    left: 40px;
+  }
+
+}
+
+.fa-mobile-screen-button {
+  color: colorgradient.$grey-alternate-color;
+}
+
+.fa-list-ul {
+  color: colorgradient.$grey-alternate-color;
+}
+
+.functionning-txt {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.fa-store {
+  color: colorgradient.$primary-color;
+}
