@@ -1,0 +1,84 @@
+@use "../annexe/_colorgradient.scss";
+@use "../annexe/_boxshadow.scss";
+
+
+
+.search-place {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    background-color: #EAEAEA;
+    @include boxshadow.boxshadowsoft;
+  }
+  
+  .section-search {
+    display: flex;
+    margin-left: 55px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fa-location-dot {
+    color: #353535;
+    margin-right: 10px;
+  }
+  
+  .search-input {
+    font-family: roboto, sans-serif;
+    color: #353535;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #EAEAEA;
+  }
+  
+  input::placeholder {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .intro {
+    margin-left: 30px;
+  }
+
+  .intro p {
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    margin-left: 5%;
+  }
+  
+  .intro-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .intro-text {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+  
+  .intro-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  
+    .intro-btn-config {
+      width: 70%;
+      border: 1px solid black;
+      border-radius: 25px;
+      @include colorgradient.linearGradient;
+    }
+  
+  
+    .intro-btn-txt {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }

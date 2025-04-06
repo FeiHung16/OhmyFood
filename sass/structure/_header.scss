@@ -1,0 +1,17 @@
+@use "../annexe/boxshadow.scss";
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin: 0 auto;
+    @include boxshadow.boxshadowsoft;
+}
+
+header img {
+    width: 65%;
+    height: 44px;
+}
