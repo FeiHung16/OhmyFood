@@ -1,0 +1,22 @@
+@use "../annexe/_colorgradient.scss";
+
+@mixin heartanimation {
+    position: relative;
+
+        &:hover {
+            transition: all;
+           @include colorgradient.linearGradient;
+           scale: 1.2;
+           opacity: 1;
+  
+        }
+
+        &:hover::after {
+            @include colorgradient.linearGradient;
+            opacity: 0;
+        }
+    }   
+
+
+
+
