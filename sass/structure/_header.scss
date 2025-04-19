@@ -7,11 +7,12 @@ header {
     justify-content: center;
     align-items: center;
     height: 60px;
-    margin: 0 auto;
+    margin: 0;
+    position: relative;
     @include boxshadow.boxshadowsoft;
 }
 
 header img {
-    width: 65%;
-    height: 44px;
+    width: 197px;
+    height: auto;
 }
