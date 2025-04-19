@@ -1,22 +1,36 @@
-@use "../annexe/_colorgradient.scss";
+@use "../annexe/colorgradient.scss";
+@use "../annexe/fontawesome.scss";
 
-@mixin heartanimation {
+@mixin heart ($right: 25px, $bottom: 33px) {
+
+    @include fontawesome.font-awesome;
+    font-weight: 400;
+    content: "\f004";
+    font-size: 22px;
+    position: absolute;
+    right: $right;
+    bottom: $bottom;
+    opacity: 1;
+    cursor: pointer;
+}
+
+@mixin heartAnimation ($right, $bottom) {
     position: relative;
 
-        &:hover {
-            transition: all;
-           @include colorgradient.linearGradient;
-           scale: 1.2;
-           opacity: 1;
-  
-        }
+    &::before {
+        @include heart($right, $bottom)
+    }
 
-        &:hover::after {
-            @include colorgradient.linearGradient;
-            opacity: 0;
-        }
-    }   
+    &::after {
+        @include heart($right, $bottom);
+        @include colorgradient.linearGradient;
+        opacity: 0;
+        scale: 1.2;
+        color: transparent;
+        font-weight: 900;
+    }
 
-
-
-
+    &:hover::after {
+        opacity: 1;
+    }
+}
