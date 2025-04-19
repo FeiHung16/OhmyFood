@@ -1,56 +1,61 @@
 @use "../annexe/_colorgradient.scss";
+@use "../annexe/breakpoint.scss";
 
 
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  background: colorgradient.$grey-color;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-bottom: 15px;
+
+  @media (min-width: breakpoint.$medium-screen) {
+    flex-direction: row-reverse;
+    justify-content: right;
+    gap: 30px;
+    padding: 64px 30px 30px 0;
+  }
+
+
+  & img {
+    height: 27px;
+    width: 137px;
+    margin-top: 22px;
+    filter: invert(1) brightness(2);
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    background: colorgradient.$grey-color;
-    margin: 0 auto;
+    padding-top: 16px;
+
+    @media (min-width: breakpoint.$medium-screen) {
+      flex-direction: row;
+      align-items: flex-end;
+      white-space: nowrap;
+    }
+
+
   }
-  
-  .footer-title {
-    font-family: shrikhand, sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+
+
+  & p,
+  a {
+    display: block;
+    margin: 0;
+    padding: 5px;
     color: colorgradient.$background-color;
   }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-  }
-  
-  .footer-icon {
+
+  i {
     color: colorgradient.$background-color;
+    padding-right: 10px;
+    height: 13px;
+    font-size: 13px;
+    vertical-align: 1px;
   }
-  
-  .footer-txtMain {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  
-    .footer-txtMain-style {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      color: colorgradient.$background-color;
-    }
-  
-  }
-  
-  .footer-txtSecond {
-    display: flex;
-    flex-direction: column;
-  
-  
-    .footer-txtSecond-style {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      color: colorgradient.$background-color;
-    }
-  
+
+
   }
