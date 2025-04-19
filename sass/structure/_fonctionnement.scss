@@ -1,11 +1,7 @@
 @use "../annexe/_colorgradient.scss";
 @use "../annexe/_boxshadow.scss";
+@use "../annexe/breakpoint.scss";
 
-.proper-functionning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .proper-lst {
   display: flex;
@@ -23,76 +19,84 @@
   transform: translateX(-75px);
 }
 
+.proper-functionning {
+  padding: 48px 0;
+  padding-left: 8%;
+  width: 90%;
 
-.proper-functionning-title {
-  position: relative;
-  right: 20%;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+h2 {
+margin-left: 20px;
 }
 
-.proper-functionning-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  width: 90%;
-  margin-top: 5px;
-  margin-bottom: 5px;
 
   & ol {
     display: flex;
     gap: 25px;
+    counter-reset: count;
     flex-direction: column;
     padding-right: 40px;
     list-style: none;
+
+    @media  (min-width: breakpoint.$large-screen) {
+      flex-direction: row;
+      padding-right: 25px;
+      
+    }
+
   }
 
   & li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    position: relative;
+    @include boxshadow.boxshadowsoft;
     gap: 20px;
     background-color: colorgradient.$light-grey-color;
     border-radius: 25px;
-    width: 320px;
-    height: 72px;
+    width: auto;
+    font-weight: 500;
+    padding: 24px 0 24px 0;
+    text-align: center;
+
+    @media  (min-width: breakpoint.$medium-screen) {
+      flex-grow: 1;
+      
+    }
+
+    &::before {
+      content: counter(count);
+      counter-increment: count 1;
+      position: absolute;
+      left: -12px;
+      width: 24px;
+      height: 24px;
+      background-color: colorgradient.$primary-color;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+     }
+    
   }
 
-  .worknumber {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    color: colorgradient.$background-color;
-    background-color: colorgradient.$primary-color;
-    border-radius: 25px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    position: absolute;
-    left: 40px;
-  }
+
 
 }
 
 .fa-mobile-screen-button {
   color: colorgradient.$grey-alternate-color;
+  margin: 0 27px 0 15px;
 }
 
 .fa-list-ul {
   color: colorgradient.$grey-alternate-color;
+  margin: 0 27px 0 15px;
 }
 
-.functionning-txt {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
+
 
 .fa-store {
   color: colorgradient.$primary-color;
-}
+  margin: 0 27px 0 15px;
+} 

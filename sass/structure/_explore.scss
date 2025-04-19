@@ -1,84 +1,69 @@
 @use "../annexe/_colorgradient.scss";
 @use "../annexe/_boxshadow.scss";
+@use "../annexe/btn.scss";
 
 
 
 .search-place {
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    background-color: #EAEAEA;
-    @include boxshadow.boxshadowsoft;
-  }
-  
-  .section-search {
-    display: flex;
-    margin-left: 55px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .fa-location-dot {
-    color: #353535;
-    margin-right: 10px;
-  }
-  
-  .search-input {
-    font-family: roboto, sans-serif;
-    color: #353535;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    background-color: #EAEAEA;
-  }
-  
-  input::placeholder {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .intro {
-    margin-left: 30px;
-  }
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  @include boxshadow.boxshadowsoft;
+}
 
-  .intro p {
-    display: flex;
-    justify-content: center;  
-    align-items: center; 
-    margin-left: 5%;
-  }
-  
-  .intro-title {
+.section-search {
+  display: flex;
+  margin-left: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-location-dot {
+  color: #353535;
+  margin-right: 10px;
+}
+
+.search-input {
+  font-family: roboto, sans-serif;
+  color: #353535;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: #EAEAEA;
+}
+
+.search-input::placeholder {
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.intro {
+  text-align: center;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: colorgradient.$light-grey-color;
+
+
+  & h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 24px;
+    margin: 0;
   }
-  
-  .intro-text {
+
+  & p {
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
   }
-  
-  .intro-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  
-    .intro-btn-config {
-      width: 70%;
-      border: 1px solid black;
-      border-radius: 25px;
-      @include colorgradient.linearGradient;
-    }
-  
-  
-    .intro-btn-txt {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      color: rgba(255, 255, 255, 1);
-    }
+
+  & button {
+    @include btn.btn;
   }
+}
