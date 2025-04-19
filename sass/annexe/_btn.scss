@@ -1,0 +1,18 @@
+@use "./boxshadow.scss";
+@use "./colorgradient.scss";
+
+@mixin btn {
+    padding: 13px 18px;
+    font-size: 16px;
+    color: white;
+    border-radius: 25px;
+    transition: filter 0.5s ease-in-out;
+    border: transparent;
+    @include colorgradient.linearGradient;
+    @include boxshadow.boxshadowsoft;
+
+    &:hover {
+        filter: brightness(1.2);
+    }
+
+}

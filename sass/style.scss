@@ -5,16 +5,21 @@
 
 
 /*Structure*/
-@use "./structure/_header.scss";
-@use "./structure/_explore.scss";
-@use "./structure/_fonctionnement.scss";
-@use "./structure/_restaurant.scss";
-@use "./structure/_footer.scss";
+@use "./structure/header.scss";
+@use "./structure/explore.scss";
+@use "./structure/fonctionnement.scss";
+@use "./structure/restaurant.scss";
+@use "./structure/footer.scss";
 
 
 /*annexe*/
-@use "./annexe/_colorgradient.scss";
-@use "./annexe/_boxshadow.scss";
-@use "./annexe/_heart.scss";
+@use "./annexe/colorgradient.scss";
+@use "./annexe/boxshadow.scss";
+@use "./annexe/heart.scss";
+@use "./annexe/fontawesome.scss";
+@use "./annexe/breakpoint.scss";
+@use "./annexe/btn.scss";
 
+/*Menu*/
+@use "./_restaurantsmenu/menu.scss";
 
