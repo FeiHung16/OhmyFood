@@ -2,6 +2,8 @@
 @use "../annexe/heart.scss";
 @use "../annexe/btn.scss";
 @use "../annexe/boxshadow.scss";
+@use "../annexe/breakpoint.scss";
+@use "../annexe/frame.scss";
 
 
 
@@ -25,8 +27,34 @@
   object-fit: cover;
 }
 
-.firstTitle {
+
+.heart {
+  @include heart.heartAnimation(40px, 10px);
+
+  @media (min-width: breakpoint.$medium-screen) {
+    @include heart.heartAnimation (-200px, 10px);
+  }
+
+  margin-right: 35px;
+}
+
+
+
+
+
+.mainMenu {
   margin-top: -35px;
+  background-color: colorgradient.$light-grey-color;
+  border-radius: 23px 23px 0 0;
+
+  @media (min-width: breakpoint.$medium-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    transform: translateX(13%);
+    border-radius: 23px 23px 0 0;
+  }
 
   h2 {
     display: inline-block;
@@ -37,28 +65,19 @@
     border-radius: 23px 23px 0 0;
     padding: 32px 17px 0 17px;
     background-color: colorgradient.$light-grey-color;
+
+    @media (min-width: breakpoint.$medium-screen) {
+      width: auto;
+      margin-top: 0;
+    }
+
   }
 
-
-
-  .heart {
-    @include heart.heartAnimation(40px, 10px);
-    margin-right: 35px;
-  }
-
-}
-
-
-
-.mainMenu {
-  margin-top: -35px;
-  background-color: colorgradient.$light-grey-color;
-  border-radius: 23px 23px 0 0;
 }
 
 .menu {
   display: grid;
-  grid-template-rows: repeat(auto auto);
+  grid-auto-rows: auto;
   justify-content: center;
   gap: 30px;
   padding: 20px 13px 40px 13px;
@@ -86,86 +105,94 @@
         left: 0;
       }
     }
+
+    & .menu__list:last-child {
+      box-shadow: none;
+    }
+
+    @media (min-width: breakpoint.$medium-screen) {
+      width: 634px;
+    }
+
   }
 
 
 
 
   &__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
-  cursor: pointer;
-  background-color: colorgradient.$background-color;
-  @include boxshadow.boxshadowsoft; 
-
-  & .menu__list__description:last-child {
-    box-shadow: none;
-  }
-
-
-  &__description {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-  
-
-
-   h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 0;
-    text-overflow: ellipsis;
-  }
-
-   p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    margin: 0;
-    text-overflow: ellipsis;
-  }
-}
-
-  &__check {
-    $check-width: 59px;
-    margin-right: -59px;
-    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $check-width;
-    background-color: colorgradient.$green-color;
-    transition: margin-right 0.5s ease-in-out;
+    justify-content: space-between;
+    align-items: end;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: colorgradient.$background-color;
+    @include boxshadow.boxshadowsoft;
+    @include frame.delay-appear;
+    animation: appears 2s;
+ 
 
-    i {
-      color: white;
-      background-clip: text;
+    &__description {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+
+
+
+      h4 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
+    &__check {
+      $check-width: 59px;
+      margin-right: -59px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $check-width;
+      background-color: colorgradient.$green-color;
+      transition: margin-right 0.5s ease-in-out;
+
+      i {
+        color: white;
+        background-clip: text;
+      }
+
+    }
+
+    &:hover &__check {
+      margin-right: 0;
+    }
+
+    &>*:not(:last-child) {
+      padding: 13.5px 15px 5.5px 15px;
+    }
   }
 
-  &:hover &__check {
-    margin-right: 0;
+  &__price {
+    margin: 0;
+    margin-left: auto;
+    color: colorgradient.$grey-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
   }
-
-  &>*:not(:last-child) {
-    padding: 13.5px 15px 5.5px 15px;
-  }
-}
-
-&__price {
-  margin: 0;
-  margin-left: auto;
-  color: colorgradient.$grey-color;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-}
 }
 
 
