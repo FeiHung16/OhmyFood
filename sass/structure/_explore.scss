@@ -4,16 +4,16 @@
 
 
 
-.search-place {
+.search {
   display: flex;
   height: 50px;
   justify-content: center;
   align-items: center;
   background-color: #EAEAEA;
   @include boxshadow.boxshadowsoft;
-}
 
-.section-search {
+
+&__container {
   display: flex;
   margin-left: 55px;
   justify-content: center;
@@ -41,6 +41,7 @@
   font-weight: 500;
   color: black;
 }
+}
 
 .intro {
   text-align: center;
@@ -61,9 +62,10 @@
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    margin-bottom: 35px;
   }
 
-  & button {
+  & a {
     @include btn.btn;
   }
 }
