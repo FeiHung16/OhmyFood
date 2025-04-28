@@ -28,18 +28,6 @@
 }
 
 
-.heart {
-  @include heart.heartAnimation(40px, 10px);
-
-  @media (min-width: breakpoint.$medium-screen) {
-    @include heart.heartAnimation (-200px, 10px);
-  }
-
-  margin-right: 35px;
-}
-
-
-
 
 
 .mainMenu {
@@ -71,6 +59,16 @@
       margin-top: 0;
     }
 
+  }
+
+  .heart {
+    @include heart.heartAnimation(40px, 10px);
+    margin-right: 35px;
+  
+    @media (min-width: breakpoint.$medium-screen) {
+      @include heart.heartAnimation (-200px, 10px);
+    }
+  
   }
 
 }

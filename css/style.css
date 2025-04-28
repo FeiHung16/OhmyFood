@@ -430,108 +430,6 @@ header img {
   object-fit: cover;
 }
 
-.heart {
-  position: relative;
-  margin-right: 35px;
-}
-.heart::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 6 Free";
-  color: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 400;
-  content: "\f004";
-  font-size: 22px;
-  position: absolute;
-  right: 40px;
-  bottom: 10px;
-  opacity: 1;
-  cursor: pointer;
-}
-.heart::after {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 6 Free";
-  color: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 400;
-  content: "\f004";
-  font-size: 22px;
-  position: absolute;
-  right: 40px;
-  bottom: 10px;
-  opacity: 1;
-  cursor: pointer;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  opacity: 0;
-  scale: 1.2;
-  color: transparent;
-  font-weight: 900;
-}
-.heart:hover::after {
-  opacity: 1;
-}
-@media (min-width: 768px) {
-  .heart {
-    position: relative;
-  }
-  .heart::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 6 Free";
-    color: inherit;
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-weight: 400;
-    content: "\f004";
-    font-size: 22px;
-    position: absolute;
-    right: -200px;
-    bottom: 10px;
-    opacity: 1;
-    cursor: pointer;
-  }
-  .heart::after {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 6 Free";
-    color: inherit;
-    background-clip: text;
-    -webkit-background-clip: text;
-    font-weight: 400;
-    content: "\f004";
-    font-size: 22px;
-    position: absolute;
-    right: -200px;
-    bottom: 10px;
-    opacity: 1;
-    cursor: pointer;
-    background-image: linear-gradient(to top, #9356DC, #FF79DA);
-    opacity: 0;
-    scale: 1.2;
-    color: transparent;
-    font-weight: 900;
-  }
-  .heart:hover::after {
-    opacity: 1;
-  }
-}
-
 .mainMenu {
   margin-top: -35px;
   background-color: #f6f6f6;
@@ -561,6 +459,107 @@ header img {
   .mainMenu h2 {
     width: auto;
     margin-top: 0;
+  }
+}
+.mainMenu .heart {
+  position: relative;
+  margin-right: 35px;
+}
+.mainMenu .heart::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 400;
+  content: "\f004";
+  font-size: 22px;
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+.mainMenu .heart::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 400;
+  content: "\f004";
+  font-size: 22px;
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  opacity: 1;
+  cursor: pointer;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  opacity: 0;
+  scale: 1.2;
+  color: transparent;
+  font-weight: 900;
+}
+.mainMenu .heart:hover::after {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .mainMenu .heart {
+    position: relative;
+  }
+  .mainMenu .heart::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 6 Free";
+    color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 400;
+    content: "\f004";
+    font-size: 22px;
+    position: absolute;
+    right: -200px;
+    bottom: 10px;
+    opacity: 1;
+    cursor: pointer;
+  }
+  .mainMenu .heart::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 6 Free";
+    color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 400;
+    content: "\f004";
+    font-size: 22px;
+    position: absolute;
+    right: -200px;
+    bottom: 10px;
+    opacity: 1;
+    cursor: pointer;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    opacity: 0;
+    scale: 1.2;
+    color: transparent;
+    font-weight: 900;
+  }
+  .mainMenu .heart:hover::after {
+    opacity: 1;
   }
 }
 
