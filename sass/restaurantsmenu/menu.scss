@@ -62,7 +62,7 @@
   }
 
   .heart {
-    @include heart.heartAnimation(40px, 10px);
+    @include heart.heartAnimation(0, 10px);
     margin-right: 35px;
   
     @media (min-width: breakpoint.$medium-screen) {
