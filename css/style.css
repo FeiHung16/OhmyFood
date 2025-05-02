@@ -310,6 +310,7 @@ header img {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  background-clip: text;
   font-family: "Font Awesome 6 Free";
   color: inherit;
   font-weight: 400;
@@ -326,6 +327,7 @@ header img {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  background-clip: text;
   font-family: "Font Awesome 6 Free";
   color: inherit;
   font-weight: 400;
@@ -464,6 +466,7 @@ header img {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  background-clip: text;
   font-family: "Font Awesome 6 Free";
   color: inherit;
   font-weight: 400;
@@ -480,6 +483,7 @@ header img {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  background-clip: text;
   font-family: "Font Awesome 6 Free";
   color: inherit;
   font-weight: 400;
@@ -508,6 +512,7 @@ header img {
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
+    background-clip: text;
     font-family: "Font Awesome 6 Free";
     color: inherit;
     font-weight: 400;
@@ -524,6 +529,7 @@ header img {
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
+    background-clip: text;
     font-family: "Font Awesome 6 Free";
     color: inherit;
     font-weight: 400;
