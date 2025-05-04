@@ -148,7 +148,7 @@ header img {
 }
 @media (min-width: 1024px) {
   .proper-functionning h2 {
-    margin-left: 5%;
+    margin-left: 8%;
     margin-bottom: 30px;
   }
 }
@@ -182,11 +182,12 @@ header img {
 @media (min-width: 768px) {
   .proper-functionning li {
     flex-grow: 1;
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .proper-functionning li {
-    left: 20px;
+    left: 45px;
     text-align: left;
     padding-left: 15px;
   }

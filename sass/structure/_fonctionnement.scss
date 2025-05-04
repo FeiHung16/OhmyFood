@@ -12,7 +12,7 @@
     margin-left: 20px;
 
     @media (min-width: breakpoint.$large-screen) {
-      margin-left: 5%;
+      margin-left: 8%;
       margin-bottom: 30px;
     }
   }
@@ -50,11 +50,11 @@
 
     @media (min-width: breakpoint.$medium-screen) {
       flex-grow: 1;
-
+      width: 100%;
     }
 
     @media (min-width: breakpoint.$large-screen) {
-      left: 20px;
+      left: 45px;
       text-align: left;
       padding-left: 15px;
     }
