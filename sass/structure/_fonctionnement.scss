@@ -8,9 +8,14 @@
   padding-left: 8%;
   width: 90%;
 
-h2 {
-margin-left: 20px;
-}
+  h2 {
+    margin-left: 20px;
+
+    @media (min-width: breakpoint.$large-screen) {
+      margin-left: 10%;
+      margin-bottom: 30px;
+    }
+  }
 
 
   & ol {
@@ -21,10 +26,10 @@ margin-left: 20px;
     padding-right: 40px;
     list-style: none;
 
-    @media  (min-width: breakpoint.$large-screen) {
+    @media (min-width: breakpoint.$large-screen) {
       flex-direction: row;
       padding-right: 25px;
-      
+
     }
 
   }
@@ -43,9 +48,15 @@ margin-left: 20px;
     white-space: nowrap;
     left: -26px;
 
-    @media  (min-width: breakpoint.$medium-screen) {
+    @media (min-width: breakpoint.$medium-screen) {
       flex-grow: 1;
-      
+
+    }
+
+    @media (min-width: breakpoint.$large-screen) {
+      left: 60px;
+      text-align: left;
+      padding-left: 15px;
     }
 
     &::before {
@@ -62,8 +73,8 @@ margin-left: 20px;
       align-items: center;
       justify-content: center;
       font-size: 14px;
-     }
-    
+    }
+
   }
 
 
@@ -73,6 +84,10 @@ margin-left: 20px;
 .fa-mobile-screen-button {
   color: colorgradient.$grey-alternate-color;
   margin: 0 27px;
+
+  @media (min-width: breakpoint.$large-screen) {
+  margin: 0 27px 0 15px;
+    }
 }
 
 .fa-list-ul {
@@ -85,4 +100,4 @@ margin-left: 20px;
 .fa-store {
   color: colorgradient.$primary-color;
   margin: 0 27px 0 15px;
-} 
+}

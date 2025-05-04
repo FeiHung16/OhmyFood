@@ -146,6 +146,12 @@ header img {
 .proper-functionning h2 {
   margin-left: 20px;
 }
+@media (min-width: 1024px) {
+  .proper-functionning h2 {
+    margin-left: 10%;
+    margin-bottom: 30px;
+  }
+}
 .proper-functionning ol {
   display: flex;
   gap: 25px;
@@ -178,6 +184,13 @@ header img {
     flex-grow: 1;
   }
 }
+@media (min-width: 1024px) {
+  .proper-functionning li {
+    left: 60px;
+    text-align: left;
+    padding-left: 15px;
+  }
+}
 .proper-functionning li::before {
   content: counter(count);
   counter-increment: count 1;
@@ -198,6 +211,11 @@ header img {
   color: #7E7E7E;
   margin: 0 27px;
 }
+@media (min-width: 1024px) {
+  .fa-mobile-screen-button {
+    margin: 0 27px 0 15px;
+  }
+}
 
 .fa-list-ul {
   color: #7E7E7E;
@@ -216,6 +234,13 @@ header img {
   padding-top: 20px;
   padding-left: 0px;
   background-color: #f6f6f6;
+}
+@media (min-width: 1024px) {
+  .section-restaurants {
+    padding: 0 10%;
+    padding-top: 20px;
+    padding-left: 10%;
+  }
 }
 .section-restaurants h2 {
   font-family: "Roboto", sans-serif;
