@@ -12,7 +12,7 @@
     margin-left: 20px;
 
     @media (min-width: breakpoint.$large-screen) {
-      margin-left: 10%;
+      margin-left: 5%;
       margin-bottom: 30px;
     }
   }
@@ -28,7 +28,7 @@
 
     @media (min-width: breakpoint.$large-screen) {
       flex-direction: row;
-      padding-right: 25px;
+      padding-right: 45px;
 
     }
 
@@ -54,7 +54,7 @@
     }
 
     @media (min-width: breakpoint.$large-screen) {
-      left: 60px;
+      left: 20px;
       text-align: left;
       padding-left: 15px;
     }
